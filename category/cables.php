@@ -47,17 +47,13 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="paints_and_sundries.php">Paints and Sundries</a>
-				    <a href="../2Tools/tools.php">Tools</a>
-				    <a href="../3Electrical/electrical.php">Electrical</a>
-				    <a href="../4Plumbing/plumbing.php">Plumbing</a>
-				    <a href="../5Home_Hardware/home_hardware.php">Home Hardware</a>
-				    <a href="../6Houseware/houseware.php">Houseware</a>
-				    <a href="../7Lawn/lawn.php">Lawn and Outdoor</a>
-				    <a href="../8Automotive/automotive.php">Automotive</a>
-				    <a href="../9Appliances/appliances.php">Small Appliances</a>
-				    <a href="../10Chemicals/chemicals.php">Chemicals and Batteries</a>
-				    <a href="../11Pets/pets.php">Pets</a>
+				    <a href="category/builtbikes.php">Built Bikes</a>
+				    <a href="category/accessories.php">Accessories</a>
+				    <a href="category/brakeset.php">Brakeset</a>
+				    <a href="category/cables.php">Cables</a>
+				    <a href="category/chain.php">Chain</a>
+				    <a href="category/cogs.php">Cogs</a>
+				    <a href="category/crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
@@ -78,8 +74,8 @@
 		</div>
 		<div id="Center"> <!--category links-->
 			<div id="subcategories_container">
+				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
-					<h3>Categories</h3><br>
 					<ul class="sublinks">
 						<li><a href="all_bikeparts.php">All</a></li><br>
 						<li><a href="accessories.php">Accessories</a></li><br>
@@ -88,25 +84,6 @@
 						<li><a href="chain.php">Chain</a></li><br>
 						<li><a href="cogs.php">Cogs</a></li>
 						<li><a href="crankset.php">Crankset</a></li><br>
-						<li><a href="fd.php">FD</a></li><br>
-						<li><a href="forks.php">Forks</a></li><br>
-						<li><a href="frames.php">Frames</a></li>
-						<li><a href="groupset.php">Groupset</a></li><br>
-						<li><a href="handlebars.php">Handlebars</a></li><br>
-						<li><a href="handlegrip.php">Handlegrip</a></li><br>
-						<li><a href="headset.php">Headset</a></li>
-						<li><a href="hub.php">Hub</a></li><br>
-						<li><a href="innertube.php">Innertube</a></li><br>
-						<li><a href="pedals.php">Pedals</a></li><br>
-						<li><a href="rd.php">RD</a></li>
-						<li><a href="rims.php">Rims</a></li><br>
-						<li><a href="saddle.php">Saddle</a></li><br>
-						<li><a href="seatclamp.php">Seatclamp</a></li><br>
-						<li><a href="seatpost.php">Seatpost</a></li>
-						<li><a href="shifters.php">Shifters</a></li>
-						<li><a href="spokes_nipples.php">Spokes and Nipples</a></li>
-						<li><a href="stems.php">Stems</a></li>
-						<li><a href="tires.php">Tires</a></li>
 					</ul>
 				</div>
 			</div>
@@ -115,16 +92,27 @@
 					$ID=$_SESSION['customer_ID'];
 					$query="SELECT * FROM inventory WHERE Category LIKE '%Parts%' and Sub_Category LIKE '%Cables%'";
 					$result=mysqli_query($connect,$query);
-
+					?><table frame=box bordercolor='#8C001A' class='prod_header'>
+					<tr>
+						<th colspan='4' class='title'>List of Products<br></th>
+					</tr>
+					<tr class='borderbottom1'>
+						<th style='width:100px'>Product ID</th>
+						<th style='width:400px'>Product Name</th>
+						<th style='width:150px'>Price</th>
+						<th style='width:80px'>Action</th>
+					</tr>
+					</table>
+					<?php
 					if(mysqli_num_rows($result)>0)
 					{?>
 						<form action="paints_and_sundries.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>"; method='POST'/><?php
-						echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:750px; height: 358px;'>";
-						echo "<tr><th colspan='4' class='title'>List of Products<br></th></tr>";
-						echo "<tr class='borderbottom1'><th>Product ID</th>";
-						echo "<th style='width:65%'>Product Name</th>";
-						echo "<th style='width:20%'>Price</th>";
-						echo "<th>Select</th>";
+						
+						//echo "<tr><th colspan='4' class='title'>List of Products<br></th></tr>";
+						echo "<th style='width:150px'>Price</th>";
+						echo "<th style='width:80px'>Action</th></tr>";
+						echo "</table>";
+						echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:730px; height: 358px;'>";
 						//echo "<th style='width:40px' colspan=2>Quantity</th>";
 						while($row=mysqli_fetch_array($result))
 						{?>
@@ -144,9 +132,9 @@
 
 							echo "<tr class='borderbottom'>";
 							echo "<td>".$Prod_ID."</td>";
-							echo "<td><a href='product_page2.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'>".$Prod_Name."</a></td>";
+							echo "<td><a href='../product_page.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'>".$Prod_Name."</a></td>";
 							echo "<td>₱".$Price."</td>";
-							echo "<td><a href='product_page2.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'><img src='css/images/search3.png' width='20px';/></a></td>";
+							echo "<td><a href='../product_page.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'><img src='css/images/search3.png' width='20px';/></a></td>";
 
 
 							/*FOR QUANTITY AND ADD TO CART LINK
