@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="bikeparts/css/accesories.css">
+	<link rel="stylesheet" type="text/css" href="category/css/accesories.css">
 	<title>Cycle Codes | Bike Parts | Accessories</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>

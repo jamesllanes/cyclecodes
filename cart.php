@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="bikeparts/css/accesories.css">
+	<link rel="stylesheet" type="text/css" href="category/css/accesories.css">
 	<title>Cycle Codes | Bike Parts | Accessories</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
@@ -47,17 +47,13 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="paints_and_sundries.php">Paints and Sundries</a>
-				    <a href="../2Tools/tools.php">Tools</a>
-				    <a href="../3Electrical/electrical.php">Electrical</a>
-				    <a href="../4Plumbing/plumbing.php">Plumbing</a>
-				    <a href="../5Home_Hardware/home_hardware.php">Home Hardware</a>
-				    <a href="../6Houseware/houseware.php">Houseware</a>
-				    <a href="../7Lawn/lawn.php">Lawn and Outdoor</a>
-				    <a href="../8Automotive/automotive.php">Automotive</a>
-				    <a href="../9Appliances/appliances.php">Small Appliances</a>
-				    <a href="../10Chemicals/chemicals.php">Chemicals and Batteries</a>
-				    <a href="../11Pets/pets.php">Pets</a>
+				     <a href="builtbikes.php">Built Bikes</a>
+				    <a href="accessories.php">Accessories</a>
+				    <a href="brakeset.php">Brakeset</a>
+				    <a href="cables.php">Cables</a>
+				    <a href="chain.php">Chain</a>
+				    <a href="cogs.php">Cogs</a>
+				    <a href="crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
@@ -81,39 +77,20 @@
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
-						<li><a href="all_bikeparts.php">All</a></li><br>
-						<li><a href="accessories.php" class="active">Accessories</a></li><br>
-						<li><a href="brakeset.php">Brakeset</a></li><br>
-						<li><a href="cables.php">Cables</a></li><br>
-						<li><a href="chain.php">Chain</a></li><br>
-						<li><a href="cogs.php">Cogs</a></li>
-						<li><a href="crankset.php">Crankset</a></li><br>
-						<li><a href="fd.php">FD</a></li><br>
-						<li><a href="forks.php">Forks</a></li><br>
-						<li><a href="frames.php">Frames</a></li>
-						<li><a href="groupset.php">Groupset</a></li><br>
-						<li><a href="handlebars.php">Handlebars</a></li><br>
-						<li><a href="handlegrip.php">Handlegrip</a></li><br>
-						<li><a href="headset.php">Headset</a></li>
-						<li><a href="hub.php">Hub</a></li><br>
-						<li><a href="innertube.php">Innertube</a></li><br>
-						<li><a href="pedals.php">Pedals</a></li><br>
-						<li><a href="rd.php">RD</a></li>
-						<li><a href="rims.php">Rims</a></li><br>
-						<li><a href="saddle.php">Saddle</a></li><br>
-						<li><a href="seatclamp.php">Seatclamp</a></li><br>
-						<li><a href="seatpost.php">Seatpost</a></li>
-						<li><a href="shifters.php">Shifters</a></li>
-						<li><a href="spokes_nipples.php">Spokes and Nipples</a></li>
-						<li><a href="stems.php">Stems</a></li>
-						<li><a href="tires.php">Tires</a></li>
+						<li><a href="category/all_bikeparts.php">All</a></li><br>
+						<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
+						<li><a href="category/brakeset.php">Brakeset</a></li><br>
+						<li><a href="category/cables.php">Cables</a></li><br>
+						<li><a href="category/chain.php">Chain</a></li><br>
+						<li><a href="category/cogs.php">Cogs</a></li>
+						<li><a href="category/crankset.php">Crankset</a></li><br>
 					</ul>
 				</div>
 			</div>
 			<div class="prod_content">
 				<?php
 					$customer_ID=$_REQUEST['customer_ID'];
-					$_SESSION['customer_ID']=$customer_ID;
+					$customer_ID=$_SESSION['customer_ID'];
 					$_REQUEST['c'];
 
 					if($_REQUEST['c']==0) //display?
