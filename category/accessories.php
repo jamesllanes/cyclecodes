@@ -47,13 +47,13 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="category/builtbikes.php">Built Bikes</a>
-				    <a href="category/accessories.php">Accessories</a>
-				    <a href="category/brakeset.php">Brakeset</a>
-				    <a href="category/cables.php">Cables</a>
-				    <a href="category/chain.php">Chain</a>
-				    <a href="category/cogs.php">Cogs</a>
-				    <a href="category/crankset.php">Crankset</a>
+				    <a href="builtbikes.php">Built Bikes</a>
+				    <a href="accessories.php">Accessories</a>
+				    <a href="brakeset.php">Brakeset</a>
+				    <a href="cables.php">Cables</a>
+				    <a href="chain.php">Chain</a>
+				    <a href="cogs.php">Cogs</a>
+				    <a href="crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
@@ -69,11 +69,13 @@
 		</div>
 		<div id="Middle"> <!--breadcrumb-->
 			<div class="breadcrumbs">
-				<p>Products > Bike Parts > Accesories</p>
+				<p>Products > Bike Parts > Accessories</p>
 			</div>
 		</div>
+		
+		
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container">
+			<div id="subcategories_container" class="sub" style="position: absolute; left: 10px;">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
@@ -87,6 +89,9 @@
 					</ul>
 				</div>
 			</div>
+			
+			
+			
 			<div class="prod_content">
 				<?php
 					$ID=$_SESSION['customer_ID'];
