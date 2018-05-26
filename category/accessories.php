@@ -63,7 +63,7 @@
 				  <button class="tablinks" onclick="#">About Us</button>
 				</div>
 				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
+					<p><a href="cart.php">Cart: </p></a>
 				</div>
 			</div>
 		</div>
@@ -72,11 +72,8 @@
 				<p>Products > Bike Parts > Accessories</p>
 			</div>
 		</div>
-<<<<<<< Updated upstream
-		
-		
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container" class="sub" style="position: absolute; left: 50px;">
+<div id="subcategories_container">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
@@ -89,26 +86,7 @@
 						<li><a href="crankset.php">Crankset</a></li><br>
 					</ul>
 				</div>
-=======
-			<div id="Center"> <!--category links-->
-				<div id="subcategories_container">
-					<div class="categories_header"><h3>Categories</h3></div><br>
-					<div class="subcategories_content">
-						<ul class="sublinks">
-							<li><a href="all_bikeparts.php">All</a></li><br>
-							<li><a href="accessories.php" class="active">Accessories</a></li><br>
-							<li><a href="brakeset.php">Brakeset</a></li><br>
-							<li><a href="cables.php">Cables</a></li><br>
-							<li><a href="chain.php">Chain</a></li><br>
-							<li><a href="cogs.php">Cogs</a></li>
-							<li><a href="crankset.php">Crankset</a></li><br>
-						</ul>
-					</div>
->>>>>>> Stashed changes
 			</div>
-			
-			
-			
 			<div class="prod_content">
 				<?php
 					$ID=$_SESSION['customer_ID'];
@@ -123,10 +101,6 @@
 						<th style='width:400px'>Product Name</th>
 						<th style='width:150px'>Price</th>
 						<th style='width:80px'>Action</th>
-						
-						
-
-
 						
 						
 					</tr>

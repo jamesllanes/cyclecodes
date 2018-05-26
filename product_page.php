@@ -47,6 +47,7 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
+<<<<<<< HEAD
 				    <a href="category/builtbikes.php">Built Bikes</a>
 				    <a href="category/accessories.php">Accessories</a>
 				    <a href="category/brakeset.php">Brakeset</a>
@@ -54,6 +55,15 @@
 				    <a href="category/chain.php">Chain</a>
 				    <a href="category/cogs.php">Cogs</a>
 				    <a href="category/crankset.php">Crankset</a>
+=======
+				    <a href="builtbikes.php">Built Bikes</a>
+				    <a href="accessories.php">Accessories</a>
+				    <a href="brakeset.php">Brakeset</a>
+				    <a href="cables.php">Cables</a>
+				    <a href="chain.php">Chain</a>
+				    <a href="cogs.php">Cogs</a>
+				    <a href="crankset.php">Crankset</a>
+>>>>>>> master
 				  </div>
 				</div>
 				<div class="tab">
@@ -77,6 +87,7 @@
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
+<<<<<<< HEAD
 						<li><a href="all_bikeparts.php">All</a></li><br>
 						<?php
 						$selectID="SELECT * FROM inventory WHERE Prod_ID LIKE '%$_REQUEST[Prod_ID]%'";
@@ -159,6 +170,16 @@
 						}
 						?>
 					</ul>
+=======
+						<li><a href="category/all_bikeparts.php">All</a></li><br>
+						<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
+						<li><a href="category/brakeset.php">Brakeset</a></li><br>
+						<li><a href="category/cables.php">Cables</a></li><br>
+						<li><a href="category/chain.php">Chain</a></li><br>
+						<li><a href="category/cogs.php">Cogs</a></li>
+						<li><a href="category/crankset.php">Crankset</a></li><br>
+						</ul>
+>>>>>>> master
 				</div>
 			</div>
 			<div class="prod_content">
