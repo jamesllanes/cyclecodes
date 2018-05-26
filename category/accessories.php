@@ -103,6 +103,8 @@
 						<th style='width:80px'>Action</th>
 						<th style='width:80px'>PRETTYGEORGIA</th>
 						<th style='width:80px'>CUTIEGEORGIA</th>
+						<th style='width:80px'>SEXYGEORGIA</th>
+
 
 						
 						
