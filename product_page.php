@@ -47,17 +47,13 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="paints_and_sundries.php">Paints and Sundries</a>
-				    <a href="../2Tools/tools.php">Tools</a>
-				    <a href="../3Electrical/electrical.php">Electrical</a>
-				    <a href="../4Plumbing/plumbing.php">Plumbing</a>
-				    <a href="../5Home_Hardware/home_hardware.php">Home Hardware</a>
-				    <a href="../6Houseware/houseware.php">Houseware</a>
-				    <a href="../7Lawn/lawn.php">Lawn and Outdoor</a>
-				    <a href="../8Automotive/automotive.php">Automotive</a>
-				    <a href="../9Appliances/appliances.php">Small Appliances</a>
-				    <a href="../10Chemicals/chemicals.php">Chemicals and Batteries</a>
-				    <a href="../11Pets/pets.php">Pets</a>
+				    <a href="builtbikes.php">Built Bikes</a>
+				    <a href="accessories.php">Accessories</a>
+				    <a href="brakeset.php">Brakeset</a>
+				    <a href="cables.php">Cables</a>
+				    <a href="chain.php">Chain</a>
+				    <a href="cogs.php">Cogs</a>
+				    <a href="crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
@@ -81,33 +77,14 @@
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
-						<li><a href="bikeparts/all_bikeparts.php">All</a></li><br>
-						<li><a href="bikeparts/accessories.php" class="active">Accessories</a></li><br>
-						<li><a href="bikeparts/brakeset.php">Brakeset</a></li><br>
-						<li><a href="bikeparts/cables.php">Cables</a></li><br>
-						<li><a href="bikeparts/chain.php">Chain</a></li><br>
-						<li><a href="bikeparts/cogs.php">Cogs</a></li>
-						<li><a href="bikeparts/crankset.php">Crankset</a></li><br>
-						<li><a href="bikeparts/fd.php">FD</a></li><br>
-						<li><a href="bikeparts/forks.php">Forks</a></li><br>
-						<li><a href="bikeparts/frames.php">Frames</a></li>
-						<li><a href="bikeparts/groupset.php">Groupset</a></li><br>
-						<li><a href="bikeparts/handlebars.php">Handlebars</a></li><br>
-						<li><a href="bikeparts/handlegrip.php">Handlegrip</a></li><br>
-						<li><a href="bikeparts/headset.php">Headset</a></li>
-						<li><a href="bikeparts/hub.php">Hub</a></li><br>
-						<li><a href="bikeparts/innertube.php">Innertube</a></li><br>
-						<li><a href="bikeparts/pedals.php">Pedals</a></li><br>
-						<li><a href="bikeparts/rd.php">RD</a></li>
-						<li><a href="bikeparts/rims.php">Rims</a></li><br>
-						<li><a href="bikeparts/saddle.php">Saddle</a></li><br>
-						<li><a href="bikeparts/seatclamp.php">Seatclamp</a></li><br>
-						<li><a href="bikeparts/seatpost.php">Seatpost</a></li>
-						<li><a href="bikeparts/shifters.php">Shifters</a></li>
-						<li><a href="bikeparts/spokes_nipples.php">Spokes and Nipples</a></li>
-						<li><a href="bikeparts/stems.php">Stems</a></li>
-						<li><a href="bikeparts/tires.php">Tires</a></li>
-					</ul>
+						<li><a href="category/all_bikeparts.php">All</a></li><br>
+						<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
+						<li><a href="category/brakeset.php">Brakeset</a></li><br>
+						<li><a href="category/cables.php">Cables</a></li><br>
+						<li><a href="category/chain.php">Chain</a></li><br>
+						<li><a href="category/cogs.php">Cogs</a></li>
+						<li><a href="category/crankset.php">Crankset</a></li><br>
+						</ul>
 				</div>
 			</div>
 			<div class="prod_content">

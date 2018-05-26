@@ -63,7 +63,7 @@
 				  <button class="tablinks" onclick="#">About Us</button>
 				</div>
 				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
+					<p><a href="cart.php">Cart: </p></a>
 				</div>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container" class="sub" style="position: absolute; left: 240px;">
+<div id="subcategories_container">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">

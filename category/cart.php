@@ -67,7 +67,7 @@
 				  <button class="tablinks" onclick="#">About Us</button>
 				</div>
 				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
+					<p><a href="cart.php">Cart: </p></a>
 				</div>
 			</div>
 		</div>
