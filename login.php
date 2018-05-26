@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/newhome.css">
-	<title>Ace Hardware</title>
+	<title>Cycle Codes</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
 <body>

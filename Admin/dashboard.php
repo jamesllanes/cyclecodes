@@ -42,7 +42,7 @@
 			<div id="Middle"> <!--Menu ICONS-->`
 				<div class="icons_grid">
 					<?php
-						if($_SESSION['usertype']=='Admin')
+						if($_SESSION['usertype']=='admin')
 						{?>
 							<div class="icons_one">
 								<a href="sales.php"><img src="css/images/icon-sales.png" height="80px"><br><p>Sales</p></a>
