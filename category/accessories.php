@@ -101,6 +101,11 @@
 						<th style='width:400px'>Product Name</th>
 						<th style='width:150px'>Price</th>
 						<th style='width:80px'>Action</th>
+						<th style='width:80px'>PRETTYGEORGIA</th>
+						<th style='width:80px'>CUTIEGEORGIA</th>
+
+						
+						
 					</tr>
 					</table>
 					<?php
