@@ -104,6 +104,8 @@
 						<th style='width:80px'>PRETTYGEORGIA</th>
 						<th style='width:80px'>CUTIEGEORGIA</th>
 						<th style='width:80px'>SEXYGEORGIA</th>
+						<th style='width:80px'>MACHOTAN</th>
+						
 
 
 						
