@@ -75,7 +75,7 @@
 		
 		
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container" class="sub" style="position: absolute; left: 10px;">
+			<div id="subcategories_container" class="sub" style="position: absolute; left: 50px;">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
