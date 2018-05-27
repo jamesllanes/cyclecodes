@@ -46,16 +46,7 @@
 			<div id="MenuNav"> <!--shop, sale&specials, wishlist, careers, about us-->
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
-				  <div class="dropdown-content">
-<<<<<<< HEAD
-				    <a href="category/builtbikes.php">Built Bikes</a>
-				    <a href="category/accessories.php">Accessories</a>
-				    <a href="category/brakeset.php">Brakeset</a>
-				    <a href="category/cables.php">Cables</a>
-				    <a href="category/chain.php">Chain</a>
-				    <a href="category/cogs.php">Cogs</a>
-				    <a href="category/crankset.php">Crankset</a>
-=======
+				 <div class="dropdown-content">
 				    <a href="builtbikes.php">Built Bikes</a>
 				    <a href="accessories.php">Accessories</a>
 				    <a href="brakeset.php">Brakeset</a>
@@ -63,18 +54,56 @@
 				    <a href="chain.php">Chain</a>
 				    <a href="cogs.php">Cogs</a>
 				    <a href="crankset.php">Crankset</a>
->>>>>>> master
 				  </div>
 				</div>
 				<div class="tab">
-				  <button class="tablinks" onclick="#">Sale & Specials</button>
-				  <button class="tablinks" onclick="location.href='wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'">Wishlist</button>
-				  <button class="tablinks" onclick="#">Careers</button>
-				  <button class="tablinks" onclick="#">About Us</button>
+					<a href="../sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
+					<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+					?>
+					<a href='../wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'><button class="tablinks">Wishlist</button></a>
+					<?php
+					}
+					?>
+				  <a href="careers.php"><button class="tablinks">Careers</button></a>
+				  <a href="about_us.php"><button class="tablinks">About Us</button></a>
 				</div>
-				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
-				</div>
+				<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+						?>
+						<div class="cart_tab2">
+						</div>
+						<?php
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+						$count=0;
+						$select_cart="SELECT * FROM cart WHERE customer_ID='$_SESSION[customer_ID]'";
+						$result2=mysqli_query($connect,$select_cart);
+						if(mysqli_num_rows($result2)>0)
+						{
+							while($row=mysqli_fetch_array($result2))
+							{
+								$count=$count+1;
+							}
+						}
+						else
+						{
+							$count=0;
+						}
+						?>
+						<div class="cart_tab">
+						<a href='cart.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&c=0'><button class="tablinks">My Cart: <?php echo $count ?> Items</button></a>
+						</div>
+						<?php
+					}
+					?>
 			</div>
 		</div>
 		<div id="Middle"> <!--breadcrumb-->
@@ -87,7 +116,6 @@
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
-<<<<<<< HEAD
 						<li><a href="all_bikeparts.php">All</a></li><br>
 						<?php
 						$selectID="SELECT * FROM inventory WHERE Prod_ID LIKE '%$_REQUEST[Prod_ID]%'";
@@ -170,16 +198,6 @@
 						}
 						?>
 					</ul>
-=======
-						<li><a href="category/all_bikeparts.php">All</a></li><br>
-						<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
-						<li><a href="category/brakeset.php">Brakeset</a></li><br>
-						<li><a href="category/cables.php">Cables</a></li><br>
-						<li><a href="category/chain.php">Chain</a></li><br>
-						<li><a href="category/cogs.php">Cogs</a></li>
-						<li><a href="category/crankset.php">Crankset</a></li><br>
-						</ul>
->>>>>>> master
 				</div>
 			</div>
 			<div class="prod_content">
@@ -219,7 +237,7 @@
 								echo "<td>".$Prod_ID."</td></tr>";
 								echo "<td colspan='2'>".$row['Description']."</td></tr>";
 								echo "<tr><td><b>Price:</b></td><td>₱".$Price."</td>";
-								echo "</tr><td><b>Quantity:</b></td>";
+								
 
 								/*FOR QUANTITY AND ADD TO CART LINK*/
 								if ($_REQUEST["Quantity"]==0)
@@ -231,26 +249,50 @@
 									$_SESSION["Quantity"]=$_REQUEST["Quantity"];
 									?><?php
 								}
-								echo "<td><input type='text' readonly name='quantity' style='width:60%' value='".$_REQUEST["Quantity"]."'/>"; ?>
-								<a href="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_REQUEST['Quantity']+1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="+"></a>
-								<?php
+								if(empty($_SESSION['customer_ID']))
+									{
+										?></tr><tr><td colspan='2'></td></tr><?php
+									}
+								elseif(!empty($_SESSION['customer_ID']))
+								{
+									echo "</tr><td><b>Quantity:</b></td>";
+									echo "<td><input type='text' readonly name='quantity' style='width:60%' value='".$_REQUEST["Quantity"]."'/>"; ?>
+									<a href="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_REQUEST['Quantity']+1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="+"></a><?php
+								}
+								
 								if ($_SESSION["Quantity"]==0)
 								{ ?>
 									<?php
 									$_SESSION["Quantity"]=null;
 								}
 								elseif($_SESSION["Quantity"]>1)
-								{ ?>
-									<a href="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_SESSION['Quantity']-1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="-"></a></td></tr>
-									<tr><td><button class="button" style="width: 107px;"><a href="cart.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&c=1" style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
-
-									<td><button class="button"><a href="wishlist.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&w=1" style="text-decoration: none; color:black;"/><img src="css/images/wishlist.png" width="15" height="12"> Add to Wishlist</a></button></td><?php
+								{ 
+									if(empty($_SESSION['customer_ID']))
+									{
+										?></tr><tr><td colspan='2'>Please login first to add this product to cart or wishlist.</td></tr><?php
+									}
+									elseif(!empty($_SESSION['customer_ID']))
+									{
+										?>
+										<a href="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_SESSION['Quantity']-1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="-"></a></td></tr>
+										<tr><td><button class="button" style="width: 107px;"><a href="cart.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&c=1" style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
+										<td><button class="button"><a href="wishlist.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&w=1" style="text-decoration: none; color:black;"/><img src="css/images/wishlist.png" width="15" height="12"> Add to Wishlist</a></button></td><?php
+									}
 								}
 								else
 								{
-									?><tr><td><button class="button" style="width: 107px;"><a href="cart.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&c=1" style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
+									if(empty($_SESSION['customer_ID']))
+									{
+										?></tr><tr><td colspan='2'>Please login first to add this product to cart or wishlist.</td></tr><?php
+									}
+									elseif(!empty($_SESSION['customer_ID']))
+									{
+									?><tr><td><button type="submit" class="button" style="width: 107px;"><a style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
+									
 									<td><button class="button"><a href="wishlist.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&w=1" style="text-decoration: none; color:black;"/><img src="css/images/wishlist.png" width="15" height="12"> Add to Wishlist</a></button></td>
 									<?php
+									}
+									
 								}
 							}
 							

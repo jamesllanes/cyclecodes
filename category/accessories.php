@@ -112,7 +112,7 @@
 			</div>
 		</div>
 		<div id="Center"> <!--category links-->
-<div id="subcategories_container">
+			<div id="subcategories_container">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
