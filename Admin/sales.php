@@ -86,17 +86,19 @@
 								echo "<tr>";
 								echo "<td>".$row['Prod_ID']."</td>";
 								echo "<td>".$row['Prod_Name']."</td>";
-								echo "<td>".$row['Price']."</td>";
+								echo "<td>₱ ".$row['Price']."</td>";
 								echo "<td>".$row['Quantity']."</td>";
 								echo "<td>₱ ".$row['Total']."</td>";
 								echo "</tr>";
 
-								$grandtotal+=$row['Total'];
+								$totalprice+=$row['Price'];
 								$totalquantity+=$row['Quantity'];
+								$grandtotal+=$row['Total'];
 							}
 							
 							echo "<tr>";
-							echo "<td colspan='3'><b>Total Quantity Sold and Grand Total</b></td>";
+							echo "<td colspan='2'><b>Total Quantity Sold and Grand Total</b></td>";
+							echo "<td>₱ ".$totalprice."</td>";
 							echo "<td>".$totalquantity."</td>";
 							echo "<td>₱ ".$grandtotal."</td>";
 							echo "</tr>";
