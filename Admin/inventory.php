@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="../Admin/css/admin.css">
-	<title>Ace Hardware | Inventory</title>
+	<title>Cycle Codes | Inventory</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
 <body class="preload">
