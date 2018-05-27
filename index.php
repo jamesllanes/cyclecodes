@@ -126,7 +126,7 @@ display:none;
 									$phone_number=$_POST['phone_number'];	
 									$address=$_POST['address'];									
 									$username=$_POST['username'];											
-									$password=md5('$_POST[password]');
+									$password=md5($_POST['password']);
 									$cpassword=$_POST['cpassword'];										
 
 									if($password==$cpassword)
