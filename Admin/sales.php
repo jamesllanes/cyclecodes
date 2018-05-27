@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="../Admin/css/admin.css">
-	<title>Ace Hardware | Sales </title>
+	<title>Cycle Codes | Sales </title>
 	<meta name="description" content="Write some words to describe your html page">
 	<style>
 		body{
@@ -89,11 +89,11 @@
 								echo "<td>".$row['Price']."</td>";
 								echo "<td>".$row['Quantity']."</td>";
 								echo "<td>".$row['Total']."</td>";
-								echo "<td>".$grandtotal."</td>";
-								echo "</tr>";
+								echo "</tr>"
+								echo "<tr><td>".$grandtotal."</td></tr>";
 								//$same=$row['Prod_Name'];
 								//echo $same;
-								$grandtotal+=$total;
+								$grandtotal+=$row['total'];
 							}
 						}
 						else
