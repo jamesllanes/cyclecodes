@@ -98,7 +98,7 @@
 							while($row=mysqli_fetch_array($result1))//admin
 							{
 								echo "<tr>";
-								echo "<td>".$row['admin_ID']."</td>";
+								echo "<td>".$row['user_ID']."</td>";
 								echo "<td>".$row['fullname']."</td>";
 								echo "<td>".$row['gender']."</td>";
 								echo "<td>".$row['email']."</td>";
@@ -113,7 +113,7 @@
 							while($row=mysqli_fetch_array($result3))//empployee
 							{
 								echo "<tr>";
-								echo "<td>".$row['employee_ID']."</td>";
+								echo "<td>".$row['user_ID']."</td>";
 								echo "<td>".$row['fullname']."</td>";
 								echo "<td>".$row['gender']."</td>";
 								echo "<td>".$row['email']."</td>";
