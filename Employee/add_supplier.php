@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/employee.css">
-	<title>Ace Hardware | Add Supplier</title>
+	<title>Cycle Codes | Add Supplier</title>
 	<meta name="description" content="Write some words to describe your html page">
 	<style>
 	body{
@@ -18,7 +18,7 @@
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="dashboard.php"><img src="css/images/ace2.png" width="14%"></a>
+				<a href="dashboard.php"><img src="css/images/cycle_codes.png" width="14%"></a>
 				<div id="Login_Container">
 					<div id="Login_Content">
 						<?php  
@@ -62,7 +62,7 @@
 			</div>
 		</div>
 		<div id="Center"> <!--Menu Content-->
-			<div class="sales_content">
+			<div class="sales_content" style="margin-left: 100px; margin-top: 30px;">
 				<table border="5" bordercolor="#57000c" class="prod_list" style="width:500px">
 					<form action="add_supplier.php" method="POST">
 						<tr>
