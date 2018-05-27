@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="bikeparts/css/accesories.css">
+	<link rel="stylesheet" type="text/css" href="category/css/accesories.css">
 	<title>Cycle Codes | Bike Parts | Accessories</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
@@ -13,7 +13,7 @@
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="../newhome.php"><img src="../cycle_codes.png" width="14%"></a>
+				<a href="../newhome.php"><img src="cycle_codes.png" width="14%"></a>
 				<div id="Login_Container1">
 					<div id="Login_Content">
 						<?php  
@@ -66,50 +66,14 @@
 				  <button class="tablinks" onclick="#">Careers</button>
 				  <button class="tablinks" onclick="#">About Us</button>
 				</div>
-				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
+				
+				
+				<div class="deleted-message" style="margin-left: 200px; margin-top: 50px;">
+				PRODUCT WAS SUCCESSFULLY REMOVED FROM THE CART<br> 
+				<tr align='center'><td colspan='6'><a href='newhome.php'><input type='button' class='button' value='Home'></a></td></tr>
 				</div>
-			</div>
-		</div>
-		<div id="Middle"> <!--breadcrumb-->
-			<div class="breadcrumbs">
-				<p>Products > Bike Parts > Accesories</p>
-			</div>
-		</div>
-		<div id="Center"> <!--category links-->
-			<div id="subcategories_container">
-				<div class="categories_header"><h3>Categories</h3></div><br>
-				<div class="subcategories_content">
-					<ul class="sublinks">
-						<li><a href="all_bikeparts.php">All</a></li><br>
-						<li><a href="accessories.php" class="active">Accessories</a></li><br>
-						<li><a href="brakeset.php">Brakeset</a></li><br>
-						<li><a href="cables.php">Cables</a></li><br>
-						<li><a href="chain.php">Chain</a></li><br>
-						<li><a href="cogs.php">Cogs</a></li>
-						<li><a href="crankset.php">Crankset</a></li><br>
-						<li><a href="fd.php">FD</a></li><br>
-						<li><a href="forks.php">Forks</a></li><br>
-						<li><a href="frames.php">Frames</a></li>
-						<li><a href="groupset.php">Groupset</a></li><br>
-						<li><a href="handlebars.php">Handlebars</a></li><br>
-						<li><a href="handlegrip.php">Handlegrip</a></li><br>
-						<li><a href="headset.php">Headset</a></li>
-						<li><a href="hub.php">Hub</a></li><br>
-						<li><a href="innertube.php">Innertube</a></li><br>
-						<li><a href="pedals.php">Pedals</a></li><br>
-						<li><a href="rd.php">RD</a></li>
-						<li><a href="rims.php">Rims</a></li><br>
-						<li><a href="saddle.php">Saddle</a></li><br>
-						<li><a href="seatclamp.php">Seatclamp</a></li><br>
-						<li><a href="seatpost.php">Seatpost</a></li>
-						<li><a href="shifters.php">Shifters</a></li>
-						<li><a href="spokes_nipples.php">Spokes and Nipples</a></li>
-						<li><a href="stems.php">Stems</a></li>
-						<li><a href="tires.php">Tires</a></li>
-					</ul>
-				</div>
-			</div>
+				
+				
 			<div class="prod_content">
 				<?php
 					$Cart_ID=$_REQUEST['Cart_ID'];
