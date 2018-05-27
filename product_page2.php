@@ -112,7 +112,7 @@
 			</div>
 		</div>
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container">
+			<!--<div id="subcategories_container">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
@@ -203,8 +203,8 @@
 						?>
 					</ul>
 				</div>
-			</div>
-			<div class="prod_content">
+			</div>-->
+			<div class="prod_content_cart">
 				<?php
 					//$_SESSION['Pets'];
 
@@ -214,7 +214,7 @@
 					if(mysqli_num_rows($result)>0)
 					{?>
 						<form action="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>"; method='POST'/><?php
-						echo "<table frame=box bordercolor='#8C001A' class='prod_desc' style='width:750px; height: 358px;'>";
+						echo "<table frame=box bordercolor='#8C001A' class='prod_desc' style='width:950px; height: 358px;'>";
 						//echo "<th style='width:40px' colspan=2>Quantity</th>";
 						while($row=mysqli_fetch_array($result))
 						{
@@ -261,7 +261,7 @@
 								{
 									echo "</tr><td><b>Quantity:</b></td>";
 									echo "<td><input type='text' readonly name='quantity' style='width:60%' value='".$_REQUEST["Quantity"]."'/>"; ?>
-									<a href="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_REQUEST['Quantity']+1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="+"></a><?php
+									<a href="product_page2.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_REQUEST['Quantity']+1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="+"></a><?php
 								}
 								
 								if ($_SESSION["Quantity"]==0)
@@ -278,7 +278,7 @@
 									elseif(!empty($_SESSION['customer_ID']))
 									{
 										?>
-										<a href="product_page.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_SESSION['Quantity']-1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="-"></a></td></tr>
+										<a href="product_page2.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Price=<?php echo $_SESSION['Price']?>&Quantity=<?php echo $_SESSION['Quantity']-1?>&customer_ID=<?php echo $customer_ID?>"><input type="button" class="button" value="-"></a></td></tr>
 										<tr><td><button class="button" style="width: 107px;"><a href="cart.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&c=1" style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
 										<td><button class="button"><a href="wishlist.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&w=1" style="text-decoration: none; color:black;"/><img src="css/images/wishlist.png" width="15" height="12"> Add to Wishlist</a></button></td><?php
 									}

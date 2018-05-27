@@ -108,7 +108,7 @@
 		</div>
 		<div id="Middle"> <!--breadcrumb-->
 			<div class="breadcrumbs">
-				<p>Products > Bike Parts > Accessories</p>
+				<p>Products > Built Bikes</p>
 			</div>
 		</div>
 		<div id="Center"> <!--category links-->
@@ -126,12 +126,12 @@
 					</ul>
 				</div>
 			</div>-->
-			<div class="prod_content">
+			<div class="prod_content_cart">
 				<?php
 					$ID=$_SESSION['customer_ID'];
 					$query="SELECT * FROM inventory WHERE Category LIKE '%Bikes%' and Sub_Category LIKE '%Built Bikes%'";
 					$result=mysqli_query($connect,$query);
-					?><table frame=box bordercolor='#8C001A' class='prod_header'>
+					?><table frame=box bordercolor='#8C001A' class='prod_header' style='width:930px;'>
 					<tr>
 						<th colspan='4' class='title'>List of Products<br></th>
 					</tr>
@@ -140,7 +140,6 @@
 						<th style='width:400px'>Product Name</th>
 						<th style='width:150px'>Price</th>
 						<th style='width:80px'>Action</th>
-						
 						
 					</tr>
 					</table>
@@ -153,7 +152,7 @@
 						echo "<th style='width:150px'>Price</th>";
 						echo "<th style='width:80px'>Action</th></tr>";
 						echo "</table>";
-						echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:730px; height: 358px;'>";
+						echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:930px; height: 358px;'>";
 						//echo "<th style='width:40px' colspan=2>Quantity</th>";
 						while($row=mysqli_fetch_array($result))
 						{?>
@@ -173,9 +172,9 @@
 
 							echo "<tr class='borderbottom'>";
 							echo "<td>".$Prod_ID."</td>";
-							echo "<td><a href='../product_page.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'>".$Prod_Name."</a></td>";
+							echo "<td><a href='../product_page2.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'>".$Prod_Name."</a></td>";
 							echo "<td>₱".$Price."</td>";
-							echo "<td><a href='../product_page.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'><img src='css/images/search3.png' width='20px';/></a></td>";
+							echo "<td><a href='../product_page2.php?Prod_ID=$Prod_ID&Quantity=1&customer_ID=$ID'><img src='css/images/search3.png' width='20px';/></a></td>";
 
 
 							/*FOR QUANTITY AND ADD TO CART LINK
