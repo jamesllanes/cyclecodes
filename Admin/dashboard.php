@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="../Admin/css/admin.css">
-	<title>Ace Hardware | Dashboard</title>
+	<title>Cycle Codes | Dashboard</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
 <body class="preload">
