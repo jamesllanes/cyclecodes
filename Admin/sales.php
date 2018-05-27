@@ -96,9 +96,8 @@
 							}
 							
 							echo "<tr>";
-							echo "<td colspan='3'>Total Quantity: ";
+							echo "<td colspan='3'>Total Quantity and Grand Total";
 							echo "<td>".$totalquantity."</td>";
-							echo "<td colspan='2'>Grand Total: ";
 							echo "<td>₱ ".$grandtotal."</td>";
 							echo "</tr>";
 						}
