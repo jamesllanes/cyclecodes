@@ -6,14 +6,14 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/employee.css">
-	<title>Cycle Codes | Inventory</title>
+	<title>Ace Hardware | Inventory</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
 <body class="preload">
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="dashboard.php"><img src="css/images/cycle_codes.png" width="14%"></a>
+				<a href="dashboard.php"><img src="css/images/ace2.png" width="14%"></a>
 				<div id="Login_Container">
 					<div id="Login_Content">
 						<?php  
@@ -67,7 +67,7 @@
 						<th colspan="3" style="width: 250px">Action</th>
 					</tr>
 						<?php
-							$query="SELECT * FROM inventory";
+							$query="SELECT * FROM inventory LIMIT 40";
 							$result=mysqli_query($connect,$query);
 
 							if(mysqli_num_rows($result)>0)

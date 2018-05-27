@@ -140,8 +140,8 @@ left: 480px;
 z-index: 1;
 }
 #search_box{
-	line-height: 19px;
-	padding-left: 5px;
+  line-height: 19px;
+  padding-left: 5px;
 }
 #search_btn {
     display: inline-block;
@@ -298,7 +298,7 @@ div.tab {
   background: -webkit-gradient(linear, left top, left bottom, from(#f7003a), to(#57000c));
   background: -moz-linear-gradient(top, #f7003a, #57000c);
   background: linear-gradient(to bottom, #f7003a, #57000c);
-	/*border: 1px #931c2a solid;*/
+  /*border: 1px #931c2a solid;*/
   border-radius: 0px 3px 3px 0px; 
   position: relative;
   left: 128px;
@@ -525,8 +525,8 @@ div.icons_grid p.logout{
 /*___ICONS GRID___*/
 .sales_content {
   background-color: transparent;
-  width: 75%;
-  height: 300px;
+  width: 802px;
+  height: 600px;
   position: relative;
   top: 250px;
   left: 100px;
@@ -534,6 +534,7 @@ div.icons_grid p.logout{
   color: black;
   z-index: 3;
   overflow-y: scroll; 
+  overflow-x: hidden; 
 }
 table.prod_list{
   position: absolute;
