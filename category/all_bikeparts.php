@@ -123,25 +123,6 @@
 						<li><a href="chain.php">Chain</a></li><br>
 						<li><a href="cogs.php">Cogs</a></li>
 						<li><a href="crankset.php">Crankset</a></li><br>
-						<li><a href="fd.php">FD</a></li><br>
-						<li><a href="forks.php">Forks</a></li><br>
-						<li><a href="frames.php">Frames</a></li>
-						<li><a href="groupset.php">Groupset</a></li><br>
-						<li><a href="handlebars.php">Handlebars</a></li><br>
-						<li><a href="handlegrip.php">Handlegrip</a></li><br>
-						<li><a href="headset.php">Headset</a></li>
-						<li><a href="hub.php">Hub</a></li><br>
-						<li><a href="innertube.php">Innertube</a></li><br>
-						<li><a href="pedals.php">Pedals</a></li><br>
-						<li><a href="rd.php">RD</a></li>
-						<li><a href="rims.php">Rims</a></li><br>
-						<li><a href="saddle.php">Saddle</a></li><br>
-						<li><a href="seatclamp.php">Seatclamp</a></li><br>
-						<li><a href="seatpost.php">Seatpost</a></li>
-						<li><a href="shifters.php">Shifters</a></li>
-						<li><a href="spokes_nipples.php">Spokes and Nipples</a></li>
-						<li><a href="stems.php">Stems</a></li>
-						<li><a href="tires.php">Tires</a></li>
 					</ul>
 				</div>
 			</div>

@@ -106,30 +106,30 @@
 					?>
 			</div>
 		</div>
-		<div id="Middle"> <!--breadcrumb-->
-			<div class="breadcrumbs">
-				<p>Products > Bike Parts > Accesories</p>
-			</div>
-		</div>
-		<div id="Center"> <!--category links-->
-			<div id="subcategories_container">
-				<div class="categories_header"><h3>Categories</h3></div><br>
-				<div class="subcategories_content">
-					<ul class="sublinks">
-						<li><a href="all_bikeparts.php">All</a></li><br>
-						<?php
-						$selectID="SELECT * FROM inventory WHERE Prod_ID LIKE '%$_REQUEST[Prod_ID]%'";
-						$resultID=mysqli_query($connect,$selectID);
+		<?php
+		$selectID="SELECT * FROM inventory WHERE Prod_ID LIKE '%$_REQUEST[Prod_ID]%'";
+		$resultID=mysqli_query($connect,$selectID);
 
-						if(mysqli_num_rows($resultID)>0)
-						{
-							while($row=mysqli_fetch_array($resultID))
-							{
-								if($row['Prod_ID']==$_REQUEST['Prod_ID'])
-								{
-									if($row['Sub_Category']=='Accessories')
-									{
-										?>
+		if(mysqli_num_rows($resultID)>0)
+		{
+			while($row=mysqli_fetch_array($resultID))
+			{
+				if($row['Prod_ID']==$_REQUEST['Prod_ID'])
+				{
+					if($row['Sub_Category']=='Accessories')
+					{
+						?>
+						<div id="Middle"> <!--breadcrumb-->
+							<div class="breadcrumbs">
+								<p>Products > Bike Parts > Accesories</p>
+							</div>
+						</div>
+						<div id="Center"> <!--category links-->
+							<div id="subcategories_container">
+								<div class="categories_header"><h3>Categories</h3></div><br>
+								<div class="subcategories_content">
+									<ul class="sublinks">
+										<li><a href="category/all_bikeparts.php">All</a></li><br>
 										<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
 										<li><a href="category/brakeset.php">Brakeset</a></li><br>
 										<li><a href="category/cables.php">Cables</a></li><br>
@@ -137,10 +137,21 @@
 										<li><a href="category/cogs.php">Cogs</a></li>
 										<li><a href="category/crankset.php">Crankset</a></li><br>
 										<?php
-									}
-									elseif($row['Sub_Category']=='Brakeset')
-									{
-										?>
+					}
+					elseif($row['Sub_Category']=='Brakeset')
+					{
+						?>
+						<div id="Middle"> <!--breadcrumb-->
+							<div class="breadcrumbs">
+								<p>Products > Bike Parts > Brakeset</p>
+							</div>
+						</div>
+						<div id="Center"> <!--category links-->
+							<div id="subcategories_container">
+								<div class="categories_header"><h3>Categories</h3></div><br>
+								<div class="subcategories_content">
+									<ul class="sublinks">
+										<li><a href="category/all_bikeparts.php">All</a></li><br>
 										<li><a href="category/accessories.php">Accessories</a></li><br>
 										<li><a href="category/brakeset.php" class="active">Brakeset</a></li><br>
 										<li><a href="category/cables.php">Cables</a></li><br>
@@ -148,10 +159,21 @@
 										<li><a href="category/cogs.php">Cogs</a></li>
 										<li><a href="category/crankset.php">Crankset</a></li><br>
 										<?php
-									}
-									elseif($row['Sub_Category']=='Cables')
-									{
-										?>
+					}
+					elseif($row['Sub_Category']=='Cables')
+					{
+						?>
+						<div id="Middle"> <!--breadcrumb-->
+							<div class="breadcrumbs">
+								<p>Products > Bike Parts > Cables</p>
+							</div>
+						</div>
+						<div id="Center"> <!--category links-->
+							<div id="subcategories_container">
+								<div class="categories_header"><h3>Categories</h3></div><br>
+								<div class="subcategories_content">
+									<ul class="sublinks">
+										<li><a href="category/all_bikeparts.php">All</a></li><br>
 										<li><a href="category/accessories.php">Accessories</a></li><br>
 										<li><a href="category/brakeset.php">Brakeset</a></li><br>
 										<li><a href="category/cables.php" class="active">Cables</a></li><br>
@@ -159,10 +181,21 @@
 										<li><a href="category/cogs.php">Cogs</a></li>
 										<li><a href="category/crankset.php">Crankset</a></li><br>
 										<?php
-									}
-									elseif($row['Sub_Category']=='Chain')
-									{
-										?>
+					}
+					elseif($row['Sub_Category']=='Chain')
+					{
+						?>
+						<div id="Middle"> <!--breadcrumb-->
+							<div class="breadcrumbs">
+								<p>Products > Bike Parts > Chain</p>
+							</div>
+						</div>
+						<div id="Center"> <!--category links-->
+							<div id="subcategories_container">
+								<div class="categories_header"><h3>Categories</h3></div><br>
+								<div class="subcategories_content">
+									<ul class="sublinks">
+										<li><a href="category/all_bikeparts.php">All</a></li><br>
 										<li><a href="category/accessories.php">Accessories</a></li><br>
 										<li><a href="category/brakeset.php">Brakeset</a></li><br>
 										<li><a href="category/cables.php">Cables</a></li><br>
@@ -170,10 +203,21 @@
 										<li><a href="category/cogs.php">Cogs</a></li>
 										<li><a href="category/crankset.php">Crankset</a></li><br>
 										<?php
-									}
-									elseif($row['Sub_Category']=='Cogs')
-									{
-										?>
+					}
+					elseif($row['Sub_Category']=='Cogs')
+					{
+						?>
+						<div id="Middle"> <!--breadcrumb-->
+							<div class="breadcrumbs">
+								<p>Products > Bike Parts > Cogs</p>
+							</div>
+						</div>
+						<div id="Center"> <!--category links-->
+							<div id="subcategories_container">
+								<div class="categories_header"><h3>Categories</h3></div><br>
+								<div class="subcategories_content">
+									<ul class="sublinks">
+										<li><a href="category/all_bikeparts.php">All</a></li><br>
 										<li><a href="category/accessories.php">Accessories</a></li><br>
 										<li><a href="category/brakeset.php">Brakeset</a></li><br>
 										<li><a href="category/cables.php">Cables</a></li><br>
@@ -181,10 +225,21 @@
 										<li><a href="category/cogs.php" class="active">Cogs</a></li>
 										<li><a href="category/crankset.php">Crankset</a></li><br>
 										<?php
-									}
-									elseif($row['Sub_Category']=='Crankset')
-									{
-										?>
+					}
+					elseif($row['Sub_Category']=='Crankset')
+					{
+						?>
+						<div id="Middle"> <!--breadcrumb-->
+							<div class="breadcrumbs">
+								<p>Products > Bike Parts > Crankset</p>
+							</div>
+						</div>
+						<div id="Center"> <!--category links-->
+							<div id="subcategories_container">
+								<div class="categories_header"><h3>Categories</h3></div><br>
+								<div class="subcategories_content">
+									<ul class="sublinks">
+										<li><a href="category/all_bikeparts.php">All</a></li><br>
 										<li><a href="category/accessories.php">Accessories</a></li><br>
 										<li><a href="category/brakeset.php">Brakeset</a></li><br>
 										<li><a href="category/cables.php">Cables</a></li><br>
@@ -192,10 +247,10 @@
 										<li><a href="category/cogs.php">Cogs</a></li>
 										<li><a href="category/crankset.php" class="active">Crankset</a></li><br>
 										<?php
-									}
-								}
-							}
-						}
+					}
+				}
+			}
+		}
 						?>
 					</ul>
 				</div>
