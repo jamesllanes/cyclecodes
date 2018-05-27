@@ -137,7 +137,7 @@
 					else
 					{
 						$card_type=$_POST['card_type'];
-						$card_number=$_POST['card_number'];
+						$card_number=md5($_POST['card_number']);
 					}
 					echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:910px; height: 358px;'>";
 					echo "<tr><th colspan='6' class='title'>Order Received<br></th></tr>";
