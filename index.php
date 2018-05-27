@@ -126,33 +126,41 @@ display:none;
 									$phone_number=$_POST['phone_number'];	
 									$address=$_POST['address'];									
 									$username=$_POST['username'];											
-									$password=$_POST['password'];											
-									$usertype='Customer';											
+									$password=$_POST['password'];
+									$cpassword=$_POST['cpassword'];											
+									$usertype='Customer';
 
-									$check_query="SELECT * FROM userinfotable_customer WHERE customer_username='$username' AND customer_password='$password'";
-									$check_result=mysqli_query($connect,$check_query);
-
-									if(mysqli_num_rows($check_result)>0)
+									if($password==$cpassword)
 									{
-										//there is already an existing same username
-										echo '<script type="text/javascript"> alert("User already exists...try another username") </script>';
-										?><meta http-equiv="refresh" content=".000001;url=index.php"/><?php
-									}
-									else
-									{
-										$insert_query="INSERT INTO userinfotable_customer VALUES ('','$fullname','$gender','$email','$phone_number','$address',$username','$password','$usertype')";
-										$result_query=mysqli_query($connect,$insert_query);
+										$check_query="SELECT * FROM userinfotable_customer WHERE customer_username='$username' AND customer_password='$password'";
+										$check_result=mysqli_query($connect,$check_query);
 
-										if($result_query)
+										if(mysqli_num_rows($check_result)>0)
 										{
-											echo '<script type="text/javascript"> alert("User has been successfully registered!") </script>';
-											?><meta http-equiv="refresh" content=".000001;url=newhome.php"/><?php
+											//there is already an existing same username
+											echo '<script type="text/javascript"> alert("User already exists...try another username") </script>';
+											?><meta http-equiv="refresh" content=".000001;url=index.php"/><?php
 										}
 										else
 										{
-											echo '<script type="text/javascript"> alert("ERROR!") </script>';
-										}   
+											$insert_query="INSERT INTO userinfotable_customer VALUES ('','$fullname','$gender','$email','$phone_number','$address',$username','$password','$usertype')";
+											$result_query=mysqli_query($connect,$insert_query);
+
+											if($result_query)
+											{
+												echo '<script type="text/javascript"> alert("User has been successfully registered!") </script>';
+												?><meta http-equiv="refresh" content=".000001;url=newhome.php"/><?php
+											}
+											else
+											{
+												echo '<script type="text/javascript"> alert("ERROR!") </script>';
+											}   
+										}
 									}
+									else
+									{?>
+										<script type="text/javascript"> alert("Password does not match!") </script><?php
+									}											
 								}
 								else
 								{
