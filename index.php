@@ -142,7 +142,7 @@ display:none;
 										}
 										else
 										{
-											$insert_query="INSERT INTO userinfotable_customer VALUES ('','$fullname','$gender','$email','$phone_number','$address','$username','$password','Customer')";
+											$insert_query="INSERT INTO userinfotable_customer VALUES ('','$fullname','$gender','$email','$phone_number','$address','$username','md5($password)','Customer')";
 											$result_query=mysqli_query($connect,$insert_query);
 
 											if($result_query)
