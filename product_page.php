@@ -342,8 +342,7 @@
 									}
 									elseif(!empty($_SESSION['customer_ID']))
 									{
-									?><tr><td><button type="submit" class="button" style="width: 107px;"><a style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
-									
+									?><tr><td><button class="button" style="width: 107px;"><a href="cart.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&c=1" style="text-decoration: none; color:black; position: relative; top:-10px; left:0px;"/><img src="css/images/cart.png" width="20" height="25" style="position: relative; top:9px; left:0px;"/> Add to Cart</a></button></td>
 									<td><button class="button"><a href="wishlist.php?Prod_ID=<?php echo $_SESSION['Prod_ID']?>&Quantity=<?php echo $_SESSION['Quantity']?>&customer_ID=<?php echo $customer_ID?>&w=1" style="text-decoration: none; color:black;"/><img src="css/images/wishlist.png" width="15" height="12"> Add to Wishlist</a></button></td>
 									<?php
 									}
