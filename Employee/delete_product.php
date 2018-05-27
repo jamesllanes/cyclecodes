@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/employee.css">
-	<title>Ace Hardware | Delete Product</title>
+	<title>Cycle Codes | Delete Product</title>
 	<meta name="description" content="Write some words to describe your html page">
 	<style>
 	body{
@@ -18,7 +18,7 @@
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="dashboard.php"><img src="css/images/ace2.png" width="14%"></a>
+				<a href="dashboard.php"><img src="css/images/cycle_codes.png" width="14%"></a>
 				<div id="Login_Container">
 					<div id="Login_Content">
 						<?php  

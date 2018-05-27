@@ -388,7 +388,28 @@ div.tab button.active {
 div.cart_tab {
   overflow: hidden;
   height : 35px;
-  width : 139px;
+  width : 130px;
+  background-color : #c40000;
+  background: #e00025;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7003a), to(#57000c));
+  background: -moz-linear-gradient(top, #f7003a, #57000c);
+  background: linear-gradient(to bottom, #f7003a, #57000c);
+  /*border: 1px #931c2a solid;*/
+  border-radius: 3px;
+  position: absolute;
+  top: 0px;
+  left: 865px;
+
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: #700013 1px 1px 1px;
+  font-weight: bold;
+}
+div.cart_tab2 {
+  overflow: hidden;
+  height : 35px;
+  width : 140px;
   background-color : #c40000;
   background: #e00025;
   background: -webkit-gradient(linear, left top, left bottom, from(#f7003a), to(#57000c));
@@ -406,10 +427,43 @@ div.cart_tab {
   text-shadow: #700013 1px 1px 1px;
   font-weight: bold;
 }
-div.cart_tab p{
-  text-align: center;
-  line-height: 5px;
-  font-family: Arial;
+/* Style the buttons inside the tab */
+div.cart_tab button {
+    float: left;
+    border: none;
+    border-right: 1px #931c2a solid;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 5px;
+    transition: 0.3s;
+    font-size: 15px;
+    background: #e00025;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f7003a), to(#57000c));
+    background: -moz-linear-gradient(top, #f7003a, #57000c);
+    background: linear-gradient(to bottom, #f7003a, #57000c);
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: #700013 1px 1px 1px;
+    font-weight: bold;
+    width: 135px;
+}
+
+/* Change background color of buttons on hover */
+div.cart_tab button.tablinks:hover{
+    background: #ff0000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b70019), to(#bc002c));
+    background: -moz-linear-gradient(top, #b70019, #bc002c);
+    background: linear-gradient(to bottom, #b70019, #bc002c);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Create an active/current tablink class */
+div.cart_tab button.active {
+    background: #a70000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a70000), to(#a70000));
+    background: -moz-linear-gradient(top, #a70000, #a70000);
+    background: linear-gradient(to bottom, #a70000, #a70000);
 }
 /*___END OF CART TAB___*/
 /*___BREADCRUMBS___*/
@@ -495,7 +549,7 @@ width : 200px;
 padding: 3px;
 position: absolute;
 top: 180px;
-left: 145px;
+left: 460px;
 z-index: 2;
 overflow-y: hidden;
 }
@@ -563,6 +617,18 @@ width : 750px;
 position: relative;
 top: 130px;
 left: 250px;
+z-index: 2;
+overflow-y: auto;
+}
+.prod_content_cart {
+background: white;
+float : top;
+clear : none;
+height : 604px;
+width : 950px;
+position: relative;
+top: 130px;
+left: 45px;
 z-index: 2;
 overflow-y: auto;
 }

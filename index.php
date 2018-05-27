@@ -185,14 +185,40 @@ display:none;
 				  </div>
 				</div>
 				<div class="tab">
-				  <a href="sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
-				  <button class="tablinks" onclick="location.href='wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'">Wishlist</button>
+					<a href="sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
+					<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+					?>
+					<a href='wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'><button class="tablinks">Wishlist</button></a>
+					<?php
+					}
+					?>
 				  <a href="careers.php"><button class="tablinks">Careers</button></a>
 				  <a href="about_us.php"><button class="tablinks">About Us</button></a>
 				</div>
-				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
-				</div>
+				<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+						?>
+						<div class="cart_tab2">
+						
+						</div>
+						<?php
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+						?>
+						<div class="cart_tab">
+						<a href='cart.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&c=0'><button class="tablinks">My Cart</button></a>
+						</div>
+						<?php
+					}
+					?>
 			</div>
 		</div>
 		<div id="Middle1"> <!--Hot Picks-->

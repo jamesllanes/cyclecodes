@@ -47,6 +47,15 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
+<<<<<<< HEAD
+				    <a href="category/builtbikes.php">Built Bikes</a>
+				    <a href="category/accessories.php">Accessories</a>
+				    <a href="category/brakeset.php">Brakeset</a>
+				    <a href="category/cables.php">Cables</a>
+				    <a href="category/chain.php">Chain</a>
+				    <a href="category/cogs.php">Cogs</a>
+				    <a href="category/crankset.php">Crankset</a>
+=======
 				    <a href="builtbikes.php">Built Bikes</a>
 				    <a href="accessories.php">Accessories</a>
 				    <a href="brakeset.php">Brakeset</a>
@@ -54,6 +63,7 @@
 				    <a href="chain.php">Chain</a>
 				    <a href="cogs.php">Cogs</a>
 				    <a href="crankset.php">Crankset</a>
+>>>>>>> master
 				  </div>
 				</div>
 				<div class="tab">
@@ -77,6 +87,90 @@
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
+<<<<<<< HEAD
+						<li><a href="all_bikeparts.php">All</a></li><br>
+						<?php
+						$selectID="SELECT * FROM inventory WHERE Prod_ID LIKE '%$_REQUEST[Prod_ID]%'";
+						$resultID=mysqli_query($connect,$selectID);
+
+						if(mysqli_num_rows($resultID)>0)
+						{
+							while($row=mysqli_fetch_array($resultID))
+							{
+								if($row['Prod_ID']==$_REQUEST['Prod_ID'])
+								{
+									if($row['Sub_Category']=='Accessories')
+									{
+										?>
+										<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
+										<li><a href="category/brakeset.php">Brakeset</a></li><br>
+										<li><a href="category/cables.php">Cables</a></li><br>
+										<li><a href="category/chain.php">Chain</a></li><br>
+										<li><a href="category/cogs.php">Cogs</a></li>
+										<li><a href="category/crankset.php">Crankset</a></li><br>
+										<?php
+									}
+									elseif($row['Sub_Category']=='Brakeset')
+									{
+										?>
+										<li><a href="category/accessories.php">Accessories</a></li><br>
+										<li><a href="category/brakeset.php" class="active">Brakeset</a></li><br>
+										<li><a href="category/cables.php">Cables</a></li><br>
+										<li><a href="category/chain.php">Chain</a></li><br>
+										<li><a href="category/cogs.php">Cogs</a></li>
+										<li><a href="category/crankset.php">Crankset</a></li><br>
+										<?php
+									}
+									elseif($row['Sub_Category']=='Cables')
+									{
+										?>
+										<li><a href="category/accessories.php">Accessories</a></li><br>
+										<li><a href="category/brakeset.php">Brakeset</a></li><br>
+										<li><a href="category/cables.php" class="active">Cables</a></li><br>
+										<li><a href="category/chain.php">Chain</a></li><br>
+										<li><a href="category/cogs.php">Cogs</a></li>
+										<li><a href="category/crankset.php">Crankset</a></li><br>
+										<?php
+									}
+									elseif($row['Sub_Category']=='Chain')
+									{
+										?>
+										<li><a href="category/accessories.php">Accessories</a></li><br>
+										<li><a href="category/brakeset.php">Brakeset</a></li><br>
+										<li><a href="category/cables.php">Cables</a></li><br>
+										<li><a href="category/chain.php" class="active">Chain</a></li><br>
+										<li><a href="category/cogs.php">Cogs</a></li>
+										<li><a href="category/crankset.php">Crankset</a></li><br>
+										<?php
+									}
+									elseif($row['Sub_Category']=='Cogs')
+									{
+										?>
+										<li><a href="category/accessories.php">Accessories</a></li><br>
+										<li><a href="category/brakeset.php">Brakeset</a></li><br>
+										<li><a href="category/cables.php">Cables</a></li><br>
+										<li><a href="category/chain.php">Chain</a></li><br>
+										<li><a href="category/cogs.php" class="active">Cogs</a></li>
+										<li><a href="category/crankset.php">Crankset</a></li><br>
+										<?php
+									}
+									elseif($row['Sub_Category']=='Crankset')
+									{
+										?>
+										<li><a href="category/accessories.php">Accessories</a></li><br>
+										<li><a href="category/brakeset.php">Brakeset</a></li><br>
+										<li><a href="category/cables.php">Cables</a></li><br>
+										<li><a href="category/chain.php">Chain</a></li><br>
+										<li><a href="category/cogs.php">Cogs</a></li>
+										<li><a href="category/crankset.php" class="active">Crankset</a></li><br>
+										<?php
+									}
+								}
+							}
+						}
+						?>
+					</ul>
+=======
 						<li><a href="category/all_bikeparts.php">All</a></li><br>
 						<li><a href="category/accessories.php" class="active">Accessories</a></li><br>
 						<li><a href="category/brakeset.php">Brakeset</a></li><br>
@@ -85,6 +179,7 @@
 						<li><a href="category/cogs.php">Cogs</a></li>
 						<li><a href="category/crankset.php">Crankset</a></li><br>
 						</ul>
+>>>>>>> master
 				</div>
 			</div>
 			<div class="prod_content">
