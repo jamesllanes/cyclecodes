@@ -47,17 +47,17 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="category/builtbikes.php">Built Bikes</a>
-				    <a href="category/accessories.php">Accessories</a>
-				    <a href="category/brakeset.php">Brakeset</a>
-				    <a href="category/cables.php">Cables</a>
-				    <a href="category/chain.php">Chain</a>
-				    <a href="category/cogs.php">Cogs</a>
-				    <a href="category/crankset.php">Crankset</a>
+				    <a href="builtbikes.php">Built Bikes</a>
+				    <a href="accessories.php">Accessories</a>
+				    <a href="brakeset.php">Brakeset</a>
+				    <a href="cables.php">Cables</a>
+				    <a href="chain.php">Chain</a>
+				    <a href="cogs.php">Cogs</a>
+				    <a href="crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
-					<a href="sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
+					<a href="../sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
 					<?php
 					if(empty($_SESSION['customer_ID']))
 					{
@@ -66,7 +66,7 @@
 					elseif(!empty($_SESSION['customer_ID']))
 					{
 					?>
-					<a href='wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'><button class="tablinks">Wishlist</button></a>
+					<a href='../wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'><button class="tablinks">Wishlist</button></a>
 					<?php
 					}
 					?>

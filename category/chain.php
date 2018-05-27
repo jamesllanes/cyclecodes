@@ -17,15 +17,15 @@
 				<div id="Login_Container1">
 					<div id="Login_Content">
 						<?php  
-							if(empty($_SESSION['customer_ID']))
+						if(empty($_SESSION['customer_ID']))
 							{
 								echo "Welcome Guest!";?>
-								<br><a href="index.php"> Create account | Sign in</a><?php
+								<br><a href="../index.php"> Create account | Sign in</a><?php
 							}
 							elseif(!empty($_SESSION['customer_ID']))
 							{
 								echo "Welcome<br><font color='red'><b>".$_SESSION['fullname']."</b></font>!";
-								echo "<form action='logout.php' method='POST'><input type='submit' value='Logout' class='logout'/></form>";
+								echo "<form action='../logout.php' method='POST'><input type='submit' value='Logout' class='logout'/></form>";
 							}
 							else
 							{
@@ -57,14 +57,53 @@
 				  </div>
 				</div>
 				<div class="tab">
-				  <button class="tablinks" onclick="#">Sale & Specials</button>
-				  <button class="tablinks" onclick="location.href='../wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'">Wishlist</button>
-				  <button class="tablinks" onclick="#">Careers</button>
-				  <button class="tablinks" onclick="#">About Us</button>
+					<a href="../sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
+					<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+					?>
+					<a href='../wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'><button class="tablinks">Wishlist</button></a>
+					<?php
+					}
+					?>
+				  <a href="careers.php"><button class="tablinks">Careers</button></a>
+				  <a href="about_us.php"><button class="tablinks">About Us</button></a>
 				</div>
-				<div class="cart_tab">
-					<p><a href="cart.php">Cart: </p></a>
-				</div>
+				<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+						?>
+						<div class="cart_tab2">
+						</div>
+						<?php
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+						$count=0;
+						$select_cart="SELECT * FROM cart WHERE customer_ID='$_SESSION[customer_ID]'";
+						$result2=mysqli_query($connect,$select_cart);
+						if(mysqli_num_rows($result2)>0)
+						{
+							while($row=mysqli_fetch_array($result2))
+							{
+								$count=$count+1;
+							}
+						}
+						else
+						{
+							$count=0;
+						}
+						?>
+						<div class="cart_tab">
+						<a href='cart.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&c=0'><button class="tablinks">My Cart: <?php echo $count ?> Items</button></a>
+						</div>
+						<?php
+					}
+					?>
 			</div>
 		</div>
 		<div id="Middle"> <!--breadcrumb-->
