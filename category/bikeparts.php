@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bikeparts.css">
-	<title>Cycle Codes | Bike Parts Categories</title>
+	<title>Cycle Codes | Bike Parts | Categories</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
 <body class="preload">
