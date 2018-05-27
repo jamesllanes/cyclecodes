@@ -127,7 +127,7 @@ display:none;
 									$address=$_POST['address'];									
 									$username=$_POST['username'];											
 									$password=md5($_POST['password']);
-									$cpassword=$_POST['cpassword'];										
+									$cpassword=md5($_POST['cpassword']);										
 
 									if($password==$cpassword)
 									{
