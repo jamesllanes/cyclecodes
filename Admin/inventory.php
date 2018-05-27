@@ -13,7 +13,7 @@
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="dashboard.php"><img src="css/images/cycle_codes.pngg" width="14%"></a>
+				<a href="dashboard.php"><img src="css/images/cycle_codes.png" width="14%"></a>
 				<div id="Login_Container">
 					<div id="Login_Content">
 						<?php  
