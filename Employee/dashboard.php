@@ -68,17 +68,14 @@
 						<th>No.</th>
 						<th style="width:350px">Product Categories</th>
 					</tr>
-					<tr><td>1</td><td>Paints and Sundries</td></tr>
-					<tr><td>2</td><td>Tools</td></tr>
-					<tr><td>3</td><td>Electrical</td></tr>
-					<tr><td>4</td><td>Plumbing</td></tr>
-					<tr><td>5</td><td>Home Hardware</td></tr>
-					<tr><td>6</td><td>Houseware</td></tr>
-					<tr><td>7</td><td>Lawn</td></tr>
-					<tr><td>8</td><td>Automotive</td></tr>
-					<tr><td>9</td><td>Appliances</td></tr>
-					<tr><td>10</td><td>Chemicals</td></tr>
-					<tr><td>11</td><td>Pets</td></tr>
+					<tr><td>1</td><td>Built Bikes</td></tr>
+					<tr><td>2</td><td>Accessories</td></tr>
+					<tr><td>3</td><td>Brake Sets</td></tr>
+					<tr><td>4</td><td>Cables</td></tr>
+					<tr><td>5</td><td>Chain</td></tr>
+					<tr><td>6</td><td>Cogs</td></tr>
+					<tr><td>7</td><td>Cranksets</td></tr>
+					
 				</table>
 				<table border="5" class="prod" style="width:600px">
 					<tr><th colspan='4'>Needs Restocking</th></tr>
@@ -89,7 +86,7 @@
 						<th style="width:75px">Action</th>
 					</tr>
 					<?php
-							$query="SELECT * FROM inventory WHERE Quantity < 100";
+							$query="SELECT * FROM inventory WHERE Quantity < 50";
 							$result=mysqli_query($connect,$query);
 
 							if(mysqli_num_rows($result)>0)
