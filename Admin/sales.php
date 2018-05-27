@@ -90,10 +90,15 @@
 								echo "<td>".$row['Quantity']."</td>";
 								echo "<td>₱ ".$row['Total']."</td>";
 								echo "</tr>";
-								
+
+								$grandtotal+=$row['total'];
+								$totalquantity+=$row['Quantity'];
 							}
-							$grandtotal+=$row['total'];
-							echo "<tr><td>₱ ".$grandtotal."</td></tr>";
+							
+							echo "<tr>";
+							echo "<td colspan='3'>₱ ".$totalquantity."</td>";
+							echo "<td colspan='2'>₱ ".$grandtotal."</td>";
+							echo "</tr>";
 						}
 						else
 						{
