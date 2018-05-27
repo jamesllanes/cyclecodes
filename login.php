@@ -40,7 +40,7 @@
 									{
 										$username=$row['admin_username'];
 										$password=$row['admin_password'];
-										$ID=$row['user_ID'];
+										$ID=$row['admin_ID'];
 										$user_type=$row['usertype'];
 										$fullname=$row['fullname'];
 
@@ -82,7 +82,7 @@
 									{
 										$username=$row['employee_username'];
 										$password=$row['employee_password'];
-										$ID=$row['user_ID'];
+										$ID=$row['employee_ID'];
 										$user_type=$row['usertype'];
 										$fullname=$row['fullname'];
 									
