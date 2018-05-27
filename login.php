@@ -96,13 +96,11 @@
 								}
 								else
 								{
-									//invalid
 									?><script type="text/javascript"> alert("User Account Doesn't Exist!"); window.location = "index.php"; </script><?php
 								}
 							}
 							else
 							{
-								//invalid
 								?><script type="text/javascript"> alert("Invalid Username or Password!"); window.location = "index.php"; </script><?php
 							}
 						?>
