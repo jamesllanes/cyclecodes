@@ -533,6 +533,7 @@ div.icons_grid p.logout{
   text-align: center;
   color: black;
   z-index: 3;
+  overflow-y: scroll; 
 }
 table.prod_list{
   position: absolute;

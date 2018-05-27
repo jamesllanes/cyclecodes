@@ -67,7 +67,7 @@
 						<th colspan="3" style="width: 250px">Action</th>
 					</tr>
 						<?php
-							$query="SELECT * FROM inventory LIMIT 20";
+							$query="SELECT * FROM inventory";
 							$result=mysqli_query($connect,$query);
 
 							if(mysqli_num_rows($result)>0)
