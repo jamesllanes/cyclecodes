@@ -78,7 +78,7 @@
 									echo "<td>".$row['Prod_ID']."</td>";
 									echo "<td>".$row['Prod_Name']."</td>";
 									echo "<td>".$row['Quantity']."</td>";
-									echo "<td>$".$row['Price']."</td>";
+									echo "<td>₱".$row['Price']."</td>";
 									echo "<td style='width: 50px'><button name='edit_product' class='all_btn'><a href='edit_product.php?Prod_ID=$row[Prod_ID]'>Edit</button></td>";
 									echo "<td style='width: 80px'><button name='restock_product' class='all_btn'><a href='restock_product.php?Prod_ID=$row[Prod_ID]'>Restock</button></td>";
 									echo "<td><button name='delete_product' class='all_btn'><a href='delete_product.php?Prod_ID=$row[Prod_ID]'>Delete</a></button></td>";
