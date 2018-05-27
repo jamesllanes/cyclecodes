@@ -89,9 +89,11 @@
 								echo "<td>".$row['Price']."</td>";
 								echo "<td>".$row['Quantity']."</td>";
 								echo "<td>".$row['Total']."</td>";
+								echo "<td>".$grandtotal."</td>";
 								echo "</tr>";
 								//$same=$row['Prod_Name'];
 								//echo $same;
+								$grandtotal+=$total;
 							}
 						}
 						else
