@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container">
+			<!--<div id="subcategories_container">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
@@ -87,8 +87,8 @@
 						
 					</ul>
 				</div>
-			</div>
-			<div class="prod_content">
+			</div>-->
+			<div class="prod_content_cart">
 				<?php
 					$mode_of_payment=$_POST['mode_of_payment'];
 					$customer_ID=$_REQUEST['customer_ID'];
@@ -108,7 +108,7 @@
 						}
 					}
 				?>
-					<table frame=box bordercolor="#8C001A" class="prod_list" style="width:750px; height: 358px;">
+					<table frame=box bordercolor="#8C001A" class="prod_list" style="width:910px; height: 358px;">
 					<tr><th colspan="3" class="title">Delivery Form<br></th></tr>
 					<tr>
 						<td><b>Fullname:</b></td>
@@ -158,7 +158,7 @@
 					?>
 					<!--back to cart and back to homepage button-->
 					<tr align='center'>
-						<td colspan='3'><a href='cart.php?customer_ID=<?php echo $customer_ID?>&c=1'/><input type='button' class='button' value='Back to Cart'></a>&nbsp;&nbsp;<a href='newhome.php'><input type='button' class='button' value='Back to Homepage'></a></td>
+						<td colspan='3'><a href='cart.php?customer_ID=<?php echo $customer_ID?>&c=0'/><input type='button' class='button' value='Back to Cart'></a>&nbsp;&nbsp;<a href='newhome.php'><input type='button' class='button' value='Back to Homepage'></a></td>
 					</tr>
 					</table>
 					</form>
