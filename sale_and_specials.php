@@ -126,9 +126,20 @@
 					<a class="categorynames" href="category/cables.php"><center><img src="css/images/cables_icon.png" height="250px" width="250px"></center></a><br>
 				</div>
 			</div>
-		</div>
-		<div id="Footer"> <!--about us, contact us, privacy policy, disclaimer-->
-			Footer
+			<div class="specials">
+				<img src="hotpicks/slideshow2.png">
+			</div>
+			<div class="wrapper">
+				<div class="one">
+					<a class="categorynames" href="category/accessories.php"><center><img src="css/images/accessories_icon.png" height="250px" width="250px"></center></a><br>
+				</div>
+				<div class="two">
+					<a class="categorynames" href="category/brakeset.php"><center><img src="css/images/brakeset_icon.png" height="250px" width="250px"></center></a><br>
+				</div>
+				<div class="three">
+					<a class="categorynames" href="category/cables.php"><center><img src="css/images/cables_icon.png" height="250px" width="250px"></center></a><br>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
