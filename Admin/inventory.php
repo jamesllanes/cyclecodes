@@ -79,8 +79,8 @@
 									echo "<tr>";
 									echo "<td>".$row['Prod_ID']."</td>";
 									echo "<td>".$row['Prod_Name']."</td>";
-									echo "<td>".$row['Price']."</td>";
 									echo "<td>".$row['Quantity']."</td>";
+									echo "<td>₱".$row['Price']."</td>";
 									echo "</tr>";
 								}
 							}
