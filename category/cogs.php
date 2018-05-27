@@ -1,3 +1,4 @@
+
 <?php
 	session_start();
 	require '../dbconfig/config.php';
@@ -47,13 +48,13 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="category/builtbikes.php">Built Bikes</a>
-				    <a href="category/accessories.php">Accessories</a>
-				    <a href="category/brakeset.php">Brakeset</a>
-				    <a href="category/cables.php">Cables</a>
-				    <a href="category/chain.php">Chain</a>
-				    <a href="category/cogs.php">Cogs</a>
-				    <a href="category/crankset.php">Crankset</a>
+				    <a href="builtbikes.php">Built Bikes</a>
+				    <a href="accessories.php">Accessories</a>
+				    <a href="brakeset.php">Brakeset</a>
+				    <a href="cables.php">Cables</a>
+				    <a href="chain.php">Chain</a>
+				    <a href="cogs.php">Cogs</a>
+				    <a href="crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
@@ -63,7 +64,7 @@
 				  <button class="tablinks" onclick="#">About Us</button>
 				</div>
 				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
+					<p><a href="cart.php">Cart: </p></a>
 				</div>
 			</div>
 		</div>

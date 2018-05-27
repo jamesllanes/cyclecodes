@@ -63,7 +63,7 @@
 				  <a href="about_us.php"><button class="tablinks">About Us</button></a>
 				</div>
 				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
+					<p><a href="cart.php">Cart: </p></a>
 				</div>
 			</div>
 		</div>
