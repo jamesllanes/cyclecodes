@@ -93,7 +93,7 @@
 						$count2=mysqli_num_rows($result2);
 						$count3=mysqli_num_rows($result3);
 
-						if(mysqli_num_rows($result1) && mysqli_num_rows($result2) && mysqli_num_rows($result3)>0)
+						if($count1 && $count2 && $count3>0)
 						{
 							while($row=mysqli_fetch_array($result1))//admin
 							{
