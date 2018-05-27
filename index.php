@@ -127,7 +127,7 @@ display:none;
 									$address=$_POST['address'];									
 									$username=$_POST['username'];											
 									$password=$_POST['password'];											
-									$usertype='customer';											
+									$usertype='Customer';											
 
 									$check_query="SELECT * FROM userinfotable_customer WHERE customer_username='$username' AND customer_password='$password'";
 									$check_result=mysqli_query($connect,$check_query);
