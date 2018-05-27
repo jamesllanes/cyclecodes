@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="bikeparts/css/accesories.css">
+	<link rel="stylesheet" type="text/css" href="category/css/accesories.css">
 	<title>Cycle Codes | My Wishlist</title>
 	<meta name="description" content="Write some words to describe your html page">
 </head>
@@ -13,7 +13,7 @@
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="../newhome.php"><img src="cycle_codes.png" width="14%"></a>
+				<a href="newhome.php"><img src="cycle_codes.png" width="14%"></a>
 				<div id="Login_Container1">
 					<div id="Login_Content">
 						<?php  
@@ -47,37 +47,72 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Categories</button>
 				  <div class="dropdown-content">
-				    <a href="paints_and_sundries.php">Paints and Sundries</a>
-				    <a href="../2Tools/tools.php">Tools</a>
-				    <a href="../3Electrical/electrical.php">Electrical</a>
-				    <a href="../4Plumbing/plumbing.php">Plumbing</a>
-				    <a href="../5Home_Hardware/home_hardware.php">Home Hardware</a>
-				    <a href="../6Houseware/houseware.php">Houseware</a>
-				    <a href="../7Lawn/lawn.php">Lawn and Outdoor</a>
-				    <a href="../8Automotive/automotive.php">Automotive</a>
-				    <a href="../9Appliances/appliances.php">Small Appliances</a>
-				    <a href="../10Chemicals/chemicals.php">Chemicals and Batteries</a>
-				    <a href="../11Pets/pets.php">Pets</a>
+				    <a href="category/builtbikes.php">Built Bikes</a>
+				    <a href="category/accessories.php">Accessories</a>
+				    <a href="category/brakeset.php">Brakeset</a>
+				    <a href="category/cables.php">Cables</a>
+				    <a href="category/chain.php">Chain</a>
+				    <a href="category/cogs.php">Cogs</a>
+				    <a href="category/crankset.php">Crankset</a>
 				  </div>
 				</div>
 				<div class="tab">
-				  <button class="tablinks" onclick="#">Sale & Specials</button>
-				  <button class="tablinks" onclick="location.href='wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'">Wishlist</button>
-				  <button class="tablinks" onclick="#">Careers</button>
-				  <button class="tablinks" onclick="#">About Us</button>
+					<a href="sale_and_specials.php"><button class="tablinks">Sale & Specials</button></a>
+					<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+					?>
+					<a href='wishlist.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&w=0'><button class="tablinks">Wishlist</button></a>
+					<?php
+					}
+					?>
+				  <a href="careers.php"><button class="tablinks">Careers</button></a>
+				  <a href="about_us.php"><button class="tablinks">About Us</button></a>
 				</div>
-				<div class="cart_tab">
-					<p>Cart: 0 Items</p>
-				</div>
+				<?php
+					if(empty($_SESSION['customer_ID']))
+					{
+						?>
+						<div class="cart_tab2">
+						</div>
+						<?php
+					}
+					elseif(!empty($_SESSION['customer_ID']))
+					{
+						$count=0;
+						$select_cart="SELECT * FROM cart WHERE customer_ID='$_SESSION[customer_ID]'";
+						$result2=mysqli_query($connect,$select_cart);
+						if(mysqli_num_rows($result2)>0)
+						{
+							while($row=mysqli_fetch_array($result2))
+							{
+								$count=$count+1;
+							}
+						}
+						else
+						{
+							$count=0;
+						}
+						?>
+						<div class="cart_tab">
+						<a href='cart.php?customer_ID=<?php echo $_SESSION["customer_ID"]?>&c=0'><button class="tablinks">My Cart: <?php echo $count ?> Items</button></a>
+						</div>
+						<?php
+					}
+					?>
 			</div>
 		</div>
 		<div id="Middle"> <!--breadcrumb-->
 			<div class="breadcrumbs">
-				<p>Products > Bike Parts > Accesories</p>
+				<p>Wishlist</p>
 			</div>
 		</div>
 		<div id="Center"> <!--category links-->
-			<div id="subcategories_container">
+			<!--<div id="subcategories_container">
 				<div class="categories_header"><h3>Categories</h3></div><br>
 				<div class="subcategories_content">
 					<ul class="sublinks">
@@ -88,29 +123,10 @@
 						<li><a href="chain.php">Chain</a></li><br>
 						<li><a href="cogs.php">Cogs</a></li>
 						<li><a href="crankset.php">Crankset</a></li><br>
-						<li><a href="fd.php">FD</a></li><br>
-						<li><a href="forks.php">Forks</a></li><br>
-						<li><a href="frames.php">Frames</a></li>
-						<li><a href="groupset.php">Groupset</a></li><br>
-						<li><a href="handlebars.php">Handlebars</a></li><br>
-						<li><a href="handlegrip.php">Handlegrip</a></li><br>
-						<li><a href="headset.php">Headset</a></li>
-						<li><a href="hub.php">Hub</a></li><br>
-						<li><a href="innertube.php">Innertube</a></li><br>
-						<li><a href="pedals.php">Pedals</a></li><br>
-						<li><a href="rd.php">RD</a></li>
-						<li><a href="rims.php">Rims</a></li><br>
-						<li><a href="saddle.php">Saddle</a></li><br>
-						<li><a href="seatclamp.php">Seatclamp</a></li><br>
-						<li><a href="seatpost.php">Seatpost</a></li>
-						<li><a href="shifters.php">Shifters</a></li>
-						<li><a href="spokes_nipples.php">Spokes and Nipples</a></li>
-						<li><a href="stems.php">Stems</a></li>
-						<li><a href="tires.php">Tires</a></li>
 					</ul>
 				</div>
-			</div>
-			<div class="prod_content">
+			</div>-->
+			<div class="prod_content_cart">
 				<?php
 					if($_REQUEST['w']==0)
 					{
@@ -232,7 +248,7 @@
 					$result_select=mysqli_query($connect,$select_cart);
 
 					$Grand_Total=0;
-					echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:750px; height: 358px;'>";
+					echo "<table frame=box bordercolor='#8C001A' class='prod_list' style='width:910px; height: 358px;'>";
 					echo "<tr><th colspan='6' class='title'>My Wishlist<br></th></tr>";
 					echo "<tr class='title'><td>Product Name</td><td>Price</td><td>Quantity</td><td>Subtotal</td><td colspan='2'><center>Action</center></td></tr>";
 
@@ -262,7 +278,7 @@
 					else
 					{
 						?><tr class='no_border'><td colspan='6' align='center'>Wishlist is empty.</td></tr>
-						<tr class='no_border'><td colspan='6' align='center'><button class="button" value='Back'><a href='newhome.php'>Back</a></td></tr>
+						<tr class='no_border'><td colspan='5' align='center'><a href='newhome.php'><input type='button' class='button' value='Back to Homepage'></a></td></tr>
 						<?php
 					}	
 				?>
