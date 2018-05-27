@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/employee.css">
-	<title>Cycle Codes | Dashboard</title>
+	<title>Ace Hardware | Dashboard</title>
 	<meta name="description" content="Write some words to describe your html page">
 	<style>
 	body{
@@ -18,7 +18,7 @@
 	<div class="blended_grid">
 		<div id="fixed_top">
 			<div id="TopNav"> <!--logo, signin, search, customer service, others-->
-				<a href="dashboard.php"><img src="css/images/cycle_codes.png" width="14%"></a>
+				<a href="dashboard.php"><img src="css/images/ace2.png" width="14%"></a>
 				<div id="Login_Container">
 					<div id="Login_Content">
 						<?php  
@@ -62,20 +62,23 @@
 			</div>
 		</div>
 		<div id="Center"> <!--Menu Content-->
-			<div class="sales_content">
+			<div class="sales_content_dashboard">
 				<table border="5" class="category" style="width:280px">
 					<tr>
 						<th>No.</th>
 						<th style="width:350px">Product Categories</th>
 					</tr>
-					<tr><td>1</td><td>Built Bikes</td></tr>
-					<tr><td>2</td><td>Accessories</td></tr>
-					<tr><td>3</td><td>Brake Sets</td></tr>
-					<tr><td>4</td><td>Cables</td></tr>
-					<tr><td>5</td><td>Chain</td></tr>
-					<tr><td>6</td><td>Cogs</td></tr>
-					<tr><td>7</td><td>Cranksets</td></tr>
-					
+					<tr><td>1</td><td>Paints and Sundries</td></tr>
+					<tr><td>2</td><td>Tools</td></tr>
+					<tr><td>3</td><td>Electrical</td></tr>
+					<tr><td>4</td><td>Plumbing</td></tr>
+					<tr><td>5</td><td>Home Hardware</td></tr>
+					<tr><td>6</td><td>Houseware</td></tr>
+					<tr><td>7</td><td>Lawn</td></tr>
+					<tr><td>8</td><td>Automotive</td></tr>
+					<tr><td>9</td><td>Appliances</td></tr>
+					<tr><td>10</td><td>Chemicals</td></tr>
+					<tr><td>11</td><td>Pets</td></tr>
 				</table>
 				<table border="5" class="prod" style="width:600px">
 					<tr><th colspan='4'>Needs Restocking</th></tr>
@@ -86,7 +89,7 @@
 						<th style="width:75px">Action</th>
 					</tr>
 					<?php
-							$query="SELECT * FROM inventory WHERE Quantity < 50";
+							$query="SELECT * FROM inventory WHERE Quantity < 100";
 							$result=mysqli_query($connect,$query);
 
 							if(mysqli_num_rows($result)>0)
