@@ -81,8 +81,8 @@ display:none;
                                         <tr>
                                             <td><label>Gender:</label></td>
                                             <td>
-                                                <input type="radio" name="gender" value="male" checked required/>Male
-                                                <input type="radio" name="gender" value="female" required/>Female
+                                                <input type="radio" name="gender" value="Male" checked required/>Male
+                                                <input type="radio" name="gender" value="Female" required/>Female
                                             </td>
                                         </tr>
                                         <tr>
@@ -127,12 +127,11 @@ display:none;
 									$address=$_POST['address'];									
 									$username=$_POST['username'];											
 									$password=$_POST['password'];
-									$cpassword=$_POST['cpassword'];											
-									$usertype='Customer';
+									$cpassword=$_POST['cpassword'];										
 
 									if($password==$cpassword)
 									{
-										$check_query="SELECT * FROM userinfotable_customer WHERE customer_username='$username' AND customer_password='$password'";
+										$check_query="SELECT * FROM userinfotable_customer WHERE customer_username='$username'";
 										$check_result=mysqli_query($connect,$check_query);
 
 										if(mysqli_num_rows($check_result)>0)
@@ -143,13 +142,13 @@ display:none;
 										}
 										else
 										{
-											$insert_query="INSERT INTO userinfotable_customer VALUES ('','$fullname','$gender','$email','$phone_number','$address',$username','$password','$usertype')";
+											$insert_query="INSERT INTO userinfotable_customer VALUES ('','$fullname','$gender','$email','$phone_number','$address','$username','$password','Customer')";
 											$result_query=mysqli_query($connect,$insert_query);
 
 											if($result_query)
 											{
 												echo '<script type="text/javascript"> alert("User has been successfully registered!") </script>';
-												?><meta http-equiv="refresh" content=".000001;url=newhome.php"/><?php
+												?><meta http-equiv="refresh" content=".000001;url=index.php"/><?php
 											}
 											else
 											{
