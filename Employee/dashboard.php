@@ -102,7 +102,7 @@
 							}
 							else
 							{
-								echo "Nothing to restock.";
+								echo "<tr><td><b>Nothing to restock!!!</b></td></tr>";
 							}
 						?>
 				</table>
