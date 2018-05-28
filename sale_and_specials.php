@@ -111,6 +111,16 @@
 				<p>Sales and Special Offers</p>
 			</div>
 		</div>
+		<?php
+		if(empty($_SESSION['customer_ID']))
+		{
+			$ID=$_SESSION['customer_ID'];
+		}
+		elseif(!empty($_SESSION['customer_ID']))
+		{
+			$ID=$_SESSION['customer_ID'];
+		}
+		?>
 		<div id="Center"> <!--category links-->
 			<div class="specials">
 				<img src="hotpicks/slideshow2.png">
@@ -126,18 +136,19 @@
 					<a class="categorynames" href="category/cables.php"><center><img src="css/images/cables_icon.png" height="250px" width="250px"></center></a><br>
 				</div>
 			</div>
+			<br><br>
 			<div class="specials">
-				<img src="hotpicks/slideshow2.png">
+				<img src="hotpicks/slideshow3.png">
 			</div>
 			<div class="wrapper">
-				<div class="one">
-					<a class="categorynames" href="category/accessories.php"><center><img src="css/images/accessories_icon.png" height="250px" width="250px"></center></a><br>
+				<div class="one2">
+					<a class="categorynames" href="product_page2.php?Prod_ID=2340051960&Quantity=1&customer_ID=<?php echo $_SESSION['customer_ID']?>"><center><img src="category/css/images/builtbikes/cannondale_catalyst_2_icon.png" height="250px" width="400px"></center></a><br>
 				</div>
-				<div class="two">
-					<a class="categorynames" href="category/brakeset.php"><center><img src="css/images/brakeset_icon.png" height="250px" width="250px"></center></a><br>
+				<div class="two2">
+					<a class="categorynames" href="product_page2.php?Prod_ID=2340051961&Quantity=1&customer_ID=<?php echo $_SESSION['customer_ID']?>"><center><img src="category/css/images/builtbikes/giant_atx2_2k18_icon.png" height="250px" width="400px"></center></a><br>
 				</div>
-				<div class="three">
-					<a class="categorynames" href="category/cables.php"><center><img src="css/images/cables_icon.png" height="250px" width="250px"></center></a><br>
+				<div class="three2">
+					<a class="categorynames" href="product_page2.php?Prod_ID=2340051963&Quantity=1&customer_ID=<?php echo $_SESSION['customer_ID']?>"><center><img src="category/css/images/builtbikes/merida_biig_nine_500_icon.png" height="250px" width="400px"></center></a><br>
 				</div>
 			</div>
 		</div>
