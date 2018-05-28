@@ -54,7 +54,7 @@
 								<a href="supplier.php"><img src="css/images/icon-supplier.png" height="80px"><br><p>Supplier</p></a>
 							</div>
 							<div class="icons_four">
-								<a href="../../home.php"><img src="css/images/icon-manage-accounts.png" height="90px"><p class="manage">Manage Accounts</p></a>
+								<a href="../home.php"><img src="css/images/icon-manage-accounts.png" height="90px"><p class="manage">Human Resources</p></a>
 							</div>
 							<div class="icons_five">
 								<a href="../logout.php"><img src="css/images/icon-logout.png" height="90px"><p class="logout">Logout</p></a>
